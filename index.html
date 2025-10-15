@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ôn tập trắc nghiệm</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js"></script>
+    
+    <script src="docx.js"></script>
+
+</head>
+<body>
+
+    <div id="upload-container" class="upload-container">
+        <h1>Công cụ chọn đáp án</h1>
+        <p>Tải lên tệp .docx chứa câu hỏi và đáp án để bắt đầu.</p>
+        <label for="file-input" class="upload-label">Chọn tệp Word</label>
+        <input type="file" id="file-input" accept=".docx" hidden>
+        <p id="file-name"></p>
+    </div>
+
+    <div id="quiz-app" class="quiz-app hidden">
+        <div class="header-title">🌟 Trắc Nghiệm 🌟</div>
+        <header class="quiz-header">
+            <div class="pagination-arrow" id="pagination-prev-arrow">&lt;</div>
+            <div id="pagination-container" class="pagination-container">
+                </div>
+            <div class="pagination-arrow" id="pagination-next-arrow">&gt;</div>
+        </header>
+
+        <main id="quiz-content" class="quiz-content">
+            <h2 id="question-text"></h2>
+            <div id="answers-container" class="answers-container">
+                </div>
+        </main>
+
+        <footer class="quiz-footer">
+            <div class="footer-left">
+                <button id="prev-btn" class="footer-btn">&lt; Quay lại</button>
+                <button id="next-btn" class="footer-btn">Tiếp theo &gt;</button>
+            </div>
+            <div class="footer-right">
+                <button id="submit-btn" class="submit-btn">Lưu & Tải file</button>
+            </div>
+        </footer>
+        
+        <div class="progress-bar">
+            <span id="progress-text">Đã chọn: 0 / 0</span>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
